@@ -1,0 +1,7 @@
+.pallete{
+    display: flex;
+    margin : 0 auto;
+    margin-top: 4px;
+    text-align: center;
+    width : 100%;
+}
