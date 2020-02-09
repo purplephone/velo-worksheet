@@ -3,6 +3,7 @@ import './App.css';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
+import Pallete from './components/Pallete';
 
 class App extends React.Component {
   id = 0;
@@ -32,7 +33,7 @@ class App extends React.Component {
       inform : inform.concat({
         id: this.id++,
         text : input,
-        color : this.color,
+        color : this.state.color,
         checked : false
       })
     })
@@ -77,8 +78,13 @@ class App extends React.Component {
             input={this.state.input}
             onChange={this.handleChange}
             onCreate={this.handleCreate}
-            onKeyPress={this.handleKeyPress}/>
-          }>
+            onKeyPress={this.handleKeyPress}
+          />}
+          pallete={
+          <Pallete
+            onClick = {this.handleColorChange}
+          />}
+          >
             <TodoItemList 
               inform={this.state.inform} 
               onToggle={this.handleToggle} 

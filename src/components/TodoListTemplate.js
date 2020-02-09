@@ -1,6 +1,5 @@
 import React from 'react';
 import './TodoListTemplate.css';
-import Pallete from './Pallete';
 
 class TodoListTemplate extends React.Component{
     render(){
@@ -9,7 +8,7 @@ class TodoListTemplate extends React.Component{
                 <div className="title">
                     오늘 할 일
                     <div>
-                        <Pallete/>
+                        {this.props.pallete}
                     </div>
                 </div>
                 <div className="form-wrapper">

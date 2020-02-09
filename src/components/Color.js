@@ -2,10 +2,11 @@ import React from 'react';
 import './Color.css';
 
 const Color = ({color, onClick}) =>{
+    const style = {backgroundColor:color};
     return(
-        <div className="color" onClick={onClick}>
+        <button className="color" style={style} onClick={() =>onClick(color)}>
             
-        </div>
+        </button>
     )
 }
 

@@ -4,12 +4,14 @@ import './Pallete.css';
 
 class Pallete extends React.Component{
     render(){
+        const {onClick} = this.props;
+        
         return(
             <div className="pallete">
-                <Color/>
-                <Color/>
-                <Color/>
-                <Color/>
+                <Color color="black" onClick={onClick}/>
+                <Color color="blue" onClick={onClick}/>
+                <Color color="red" onClick={onClick}/>
+                <Color color="orange" onClick={onClick}/>
             </div>
         )
     }
